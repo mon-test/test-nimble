@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nimbl3</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+<body data-spy="scroll" data-target="#nav">
+
+	<nav id="nav" class="navbar navbar-fixed-top">
+		<div class="container">
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="visible-xs-block" href="#home">
+					<img class="brand-logo img-responsive" src="<%= asset_path('nimble-logo.png') %>" alt="Nimbl3">
+				</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav nav-justified center-block">
+					<li class="active"><a href="#home">Home</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#works">Works</a></li>
+					<li><a href="#team">Team</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a href="#contact">Join us</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</nav>
+
+<%= yield %>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<div class="footer-links">
+						<a href="#services">What we do</a>
+						<a href="#">Testimonials</a>
+						<a href="#team">Team</a>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="footer-social text-center">
+						<img class="" src="<%= asset_path('facebook-b.png') %>" alt="Facebook">
+						<img class="" src="<%= asset_path('twitter-b.png') %>" alt="Facebook">
+						<img class="" src="<%= asset_path('github-b.png') %>" alt="Facebook">
+					</div>
+				</div>
+				<div class="col-md-5">
+					<div class="footer-contact">
+						<h4>NIMBL3 OFFICE</h4>
+						<p>A: 25th Floor, Workington Tower, 78 Bonham Strand<br>
+							Sheung Wan, Hong Kong<br>
+							<a href="mailto:hello@nimbl3.com">E: hello@nimbl3.com</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>

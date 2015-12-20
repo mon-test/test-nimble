@@ -1,0 +1,349 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$color-primary    : #00aeef;
+
+$text-color-one   : #464646;
+$text-color-two   : #898989;
+$text-color-three : #fff;
+$text-color-h     : $color-primary;
+
+$bg-color-one     : #0b536e;
+$bg-color-two     : #fff;
+$bg-color-three   : #ebebeb;
+$bg-color-four    : #373d43;
+$bg-color-footer  : #1f2124;
+
+$bg-color-navbar  : rgba(black, .5);
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600);
+
+
+// Bootstrap
+$font-size-base             : 16px;
+$border-radius-base         : 10px;
+$navbar-height              : 60px;
+$navbar-border-radius       : none;
+$nav-link-padding           : 17px 15px;
+$navbar-collapse-max-height : 500px;
+
+$btn-primary-color       : $text-color-three;
+$btn-primary-bg          : $color-primary;
+$btn-primary-border      : $color-primary;
+
+$input-color-placeholder : $color-primary;
+$hr-border : #c2c2c2;
+
+@import "bootstrap";
+
+.navbar .navbar-toggle .icon-bar {
+	background-color: $text-color-three;
+}
+.btn {
+	padding: 5px 26px;
+}
+
+
+// utils
+.col-centered {
+	float: none;
+	margin: 0 auto;
+}
+
+.nav-justified {
+	width: 98%;
+}
+.nav-justified > li {
+	float: none;
+}
+.nav-justified > li > a {
+	color: $text-color-three;
+	font-size: large;
+
+	&:hover {
+		color: $color-primary;
+		background-color: $bg-color-two;
+	}
+}
+@media (min-width: 768px) {
+	.nav-justified {
+		width: 97%;
+		max-width: 900px;
+	}
+}
+.nav-justified > li.active > a {
+	color: #00aeef;
+}
+
+.parent {
+	display: table;
+	// table-layout: fixed;
+	// position: relative;
+}
+.child {
+	display: table-cell;
+	vertical-align: bottom;
+	float: none;
+	// position: absolute;
+	// bottom: 0;
+	// right: 50%;
+	padding-left: 0;
+	padding-right: 0;
+}
+.child-right {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+
+// tags
+body {
+	position: relative;
+	color: $text-color-one;
+	background-color: $bg-color-one;
+	font-family: 'Raleway', sans-serif;
+	//padding-top: 60px;
+}
+h1 {
+	font-weight: 600;
+}
+h1, h2, h3, h4 {
+	color: $text-color-h;
+}
+
+footer {
+	color: #ccc;
+	background-color: $bg-color-footer;
+
+	padding-top: 4em;
+	padding-bottom: 4em;
+}
+.footer-links a {
+	color: #ccc;
+	padding: 0 .5em;
+}
+.footer-social img {
+	padding: 0 .5em;
+}
+.footer-links {
+	text-align: left;
+}
+.footer-contact {
+	text-align: right;
+	h4 {
+		margin-top: 0;
+	}
+}
+@media (max-width: 991px) {
+	.footer-links {
+		text-align: center;
+		padding-bottom: 2em;
+	}
+	.footer-contact {
+		text-align: center;
+		padding-top: 2em;
+	}
+}
+
+
+input, button, select, textarea {
+	text-align: center;
+}
+textarea {
+	resize: none;
+}
+.form-control {
+	color: $color-primary;
+	border: none;
+	border-radius: 10px;
+}
+h5.position {
+	margin-top: -.5em;
+}
+
+
+// shared
+.title {
+	padding: 0 1em 1em;
+}
+
+
+.team-img {
+	//overflow: hidden;
+	//border-radius: 50%;
+}
+.team-img-shadow {
+	-webkit-box-shadow : 0px 0px 10px rgba(0,0,0,0.2);
+	-moz-box-shadow    : 0px 0px 10px rgba(0,0,0,0.2);
+	box-shadow         : 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.divider {
+	width: 100%;
+	display: block;
+}
+$divider-bg-color-list: $bg-color-one $bg-color-two $bg-color-two $bg-color-three;
+@for $i from 1 through length( $divider-bg-color-list ) {
+	.divider-#{$i} {
+		@extend .divider;
+		background-color: nth( $divider-bg-color-list, $i );
+	}
+}
+
+
+// class
+.navbar {
+	background-color: $bg-color-navbar;
+
+	.brand-logo {
+		height: 60px;
+		padding-top: 15px;
+	}
+}
+
+.section {
+	overflow-x: hidden;
+	padding-top: 4em;
+	padding-bottom: 4em;
+}
+@media (max-width: 480px) {
+	.section {
+		padding-top: 3em;
+		padding-bottom: 3em;
+	}
+}
+
+.section-home {
+	//@extend .section;
+	padding-top: 10em;
+	color: #fff;
+	background-color: $bg-color-one;
+
+	.sub-title {
+		color: #fff;
+		font-weight: bold;
+		line-height: 1.3em;
+		margin-top: 0;
+	}
+
+	.follow {
+		color: #fff;
+	}
+
+	.social-wrapper img,
+	.paper-plane-wrapper img {
+		padding: 1em 1em;
+	}
+	.row {
+		padding-top: 4em;
+	}
+}
+
+.section-services {
+	//@extend .section;
+	background-color: $bg-color-two;
+	//padding-top: 5em;
+
+	.clock-wrapper {
+		height: 220px;
+		width: 270px;
+		overflow: hidden;
+
+		.img {
+			position: absolute;
+			bottom: -90px;
+		}
+	}
+	.detail-wrapper {
+		padding: .5em 0;
+	}
+
+	.iphone-wrapper {
+		height: 225px;
+		width: 319px;
+		//max-width: 100vw;
+		overflow: hidden;
+
+		.img {
+			position: absolute;
+			left: .5em;
+			//bottom: -50px;
+		}
+	}
+
+	.row-iphone, .row-transparency {
+		padding-top: 6em;
+	}
+	.row-transparency {
+		//padding-bottom: 5em;
+	}
+
+	.row-iphone, .row-transparency {
+		background: url("shadow.png") repeat-x;
+	}
+}
+
+.section-works {
+	//@extend .section;
+	background-color: $bg-color-three;
+	padding-bottom: 5em;
+
+	img {
+		margin-top: 2em;
+	}
+	h3 {
+		margin-top: 1em;
+	}
+}
+
+.section-works2 {
+	//@extend .section;
+	color: $text-color-two;
+	background-color: $bg-color-two;
+
+	.team-title {
+		color: $color-primary;
+
+		.position {
+			font-style: italic;
+		}
+	}
+
+	.quotation {
+		padding-top: 3em;
+	}
+
+}
+
+.section-team {
+	//@extend .section;
+	color: $text-color-two;
+	background-color: $bg-color-three;
+	//padding-bottom: 5em;
+
+	.team-title {
+		color: $color-primary;
+
+		.position {
+			font-style: italic;
+		}
+	}
+}
+
+.section-contact {
+	//@extend .section;
+	background-color: $bg-color-four;
+
+	.form-control {
+		margin-bottom: 1em;
+	}
+
+	.row {
+		padding-bottom: 2em;
+	}
+}
+

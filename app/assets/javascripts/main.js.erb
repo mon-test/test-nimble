@@ -1,0 +1,31 @@
+$( document ).ready( function() {
+
+	$( 'a[href*=#]:not([href=#])' ).click( function() {
+		if ( location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname ) {
+			var target = $( this.hash );
+			target = target.length ? target : $( '[name=' + this.hash.slice(1) +']' );
+			if ( target.length ) {
+				$( 'html,body' ).animate({
+					scrollTop: target.offset().top
+				}, 500);
+
+				$( '#navbar-collapse' ).collapse( 'hide' );
+
+				return false;
+			}
+		}
+	} );
+
+	$( '#select-start' ).css( 'cursor', 'pointer' ).click(function () {
+		// console.log( 'select-start' );
+		$( '#line-start' ).attr( 'src', "<%= asset_path('line-selected.png') %>" );
+		$( '#line-join' ).attr( 'src', "<%= asset_path('line-unselect.png') %>" );
+	});
+
+	$( '#select-join' ).css( 'cursor', 'pointer' ).click(function () {
+		// console.log( 'select-join' );
+		$( '#line-start' ).attr( 'src', "<%= asset_path('line-unselect.png') %>" );
+		$( '#line-join' ).attr( 'src', "<%= asset_path('line-selected.png') %>" );
+	});
+
+} );

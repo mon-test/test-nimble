@@ -1,0 +1,19 @@
+<svg id="paper.png_paper.svg" data-name="paper.png,paper.svg" xmlns="http://www.w3.org/2000/svg" width="42" height="50" viewBox="0 0 42 50">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2dbcf2;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #8fdffd;
+      }
+    </style>
+  </defs>
+  <path id="Ellipse_1_copy_2" data-name="Ellipse 1 copy 2" class="cls-1" d="M837.652,5365h34.7a3.646,3.646,0,0,1,3.652,3.64v42.72a3.646,3.646,0,0,1-3.652,3.64h-34.7a3.646,3.646,0,0,1-3.652-3.64v-42.72A3.646,3.646,0,0,1,837.652,5365Zm2.739,27.27a2.725,2.725,0,1,1,2.739-2.72A2.731,2.731,0,0,1,840.391,5392.27Zm0-12.72a2.73,2.73,0,1,1,2.739-2.73A2.74,2.74,0,0,1,840.391,5379.55Zm0,20a2.725,2.725,0,1,1-2.739,2.72A2.731,2.731,0,0,1,840.391,5399.55Z" transform="translate(-834 -5365)"/>
+  <path id="Rectangle_2_copy_3" data-name="Rectangle 2 copy 3" class="cls-2" d="M846.783,5373.18h24.652V5375H846.783v-1.82Zm0,6.37h24.652v1.81H846.783v-1.81Zm0,6.36h24.652v1.82H846.783v-1.82Zm0,6.36h24.652v1.82H846.783v-1.82Zm0,6.37H862.3v1.81H846.783v-1.81Z" transform="translate(-834 -5365)"/>
+</svg>
